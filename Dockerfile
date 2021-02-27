@@ -1,10 +1,8 @@
-FROM debian:buster-slim
+FROM alpine:3.13.2
 MAINTAINER Chris Wiegand <chris.wiegand@gmail.com>
-VOLUME ["/etc/fetchmail","/srv/maildir"]
+VOLUME ["/etc/fetchmail"]
 
-COPY install-packages.sh .
-RUN ./install-packages.sh
+RUN apk add fetchmail
 COPY run.sh /run.sh
-COPY procmailrc /etc/procmailrc
 
 ENTRYPOINT ["/run.sh"]

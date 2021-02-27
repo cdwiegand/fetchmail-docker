@@ -1,7 +1,0 @@
-LOGFILE=/dev/stdout
-DEFAULT=/srv/maildir
-MAILDIR=/srv/maildir
-VERBOSE=on
-
-:0
-Maildir/
